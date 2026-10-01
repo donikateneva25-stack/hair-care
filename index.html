@@ -1,478 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="bg">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>HAIR CARE – Грижа за косата</title>
-
-<style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: #f5eee7;
-color: #3e2b20;
-}
-
-/* ГОРНО СЪОБЩЕНИЕ */
-.top-bar {
-background: #4b3022;
-color: white;
-text-align: center;
-padding: 14px;
-font-size: 16px;
-}
-
-/* HEADER */
-header {
-background: white;
-padding: 18px 6%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-border-bottom: 1px solid #ddd0c5;
-}
-
-.logo {
-font-family: Georgia, serif;
-font-size: 24px;
-font-weight: bold;
-color: #4b3022;
-}
-
-.logo span {
-font-size: 12px;
-display: block;
-letter-spacing: 3px;
-font-weight: normal;
-}
-
-nav {
-display: flex;
-gap: 30px;
-}
-
-nav a {
-text-decoration: none;
-color: #3e2b20;
-font-size: 16px;
-}
-
-nav a:hover {
-color: #9a6b4d;
-}
-
-.icons {
-display: flex;
-gap: 20px;
-font-size: 25px;
-}
-
-/* HERO */
-.hero {
-margin: 30px auto;
-width: 90%;
-min-height: 430px;
-border-radius: 5px;
-
-background:
-linear-gradient(rgba(50,30,20,.25), rgba(50,30,20,.25)),
-url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=80");
-
-background-size: cover;
-background-position: center;
-
-display: flex;
-align-items: center;
-padding: 50px;
-}
-
-.hero-content {
-color: white;
-max-width: 550px;
-}
-
-.hero-content h1 {
-font-family: Georgia, serif;
-font-size: 48px;
-margin-bottom: 20px;
-}
-
-.hero-content p {
-font-size: 20px;
-margin-bottom: 25px;
-}
-
-.button {
-display: inline-block;
-background: #6b4632;
-color: white;
-padding: 14px 28px;
-text-decoration: none;
-border-radius: 3px;
-}
-
-.button:hover {
-background: #4b3022;
-}
-
-/* КАТЕГОРИИ */
-.section {
-width: 90%;
-margin: 60px auto;
-}
-
-.section-title {
-text-align: center;
-font-family: Georgia, serif;
-font-size: 32px;
-margin-bottom: 30px;
-color: #4b3022;
-}
-
-.categories {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-
-.category {
-background: white;
-padding: 20px;
-text-align: center;
-border-radius: 5px;
-}
-
-.category img {
-width: 100%;
-height: 230px;
-object-fit: cover;
-}
-
-.category h3 {
-margin: 15px 0;
-font-family: Georgia, serif;
-}
-
-/* ПРОДУКТИ */
-.products {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
-}
-
-.product {
-background: white;
-padding: 15px;
-text-align: center;
-border-radius: 5px;
-}
-
-.product img {
-width: 100%;
-height: 250px;
-object-fit: cover;
-}
-
-.product h3 {
-margin: 12px 0 8px;
-}
-
-.price {
-color: #8a5a3c;
-font-weight: bold;
-font-size: 18px;
-margin-bottom: 12px;
-}
-
-/* ВИДЕО */
-.video-section {
-background: #e8d8ca;
-padding: 60px 5%;
-margin-top: 60px;
-}
-
-.video-container {
-max-width: 850px;
-margin: auto;
-}
-
-.video-container iframe {
-width: 100%;
-height: 480px;
-border: none;
-border-radius: 8px;
-}
-
-.video-text {
-text-align: center;
-margin-top: 20px;
-font-size: 18px;
-}
-
-/* СЪВЕТИ */
-.tips {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-
-.tip {
-background: white;
-padding: 30px;
-text-align: center;
-border-radius: 5px;
-}
-
-.tip h3 {
-color: #6b4632;
-margin-bottom: 12px;
-}
-
-/* FOOTER */
-footer {
-background: #4b3022;
-color: white;
-text-align: center;
-padding: 35px;
-margin-top: 60px;
-}
-
-footer p {
-margin: 8px;
-}
-
-/* МОБИЛНА ВЕРСИЯ */
-@media (max-width: 800px) {
-
-header {
-flex-wrap: wrap;
-gap: 15px;
-}
-
-nav {
-width: 100%;
-justify-content: center;
-gap: 15px;
-order: 3;
-}
-
-.hero {
-min-height: 400px;
-padding: 25px;
-}
-
-.hero-content h1 {
-font-size: 35px;
-}
-
-.categories,
-.products,
-.tips {
-grid-template-columns: 1fr;
-}
-
-.video-container iframe {
-height: 300px;
-}
-}
-</style>
+<title>Hair Care - Грижа за косата</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ГОРНО СЪОБЩЕНИЕ -->
-<div class="top-bar">
-Доставка за един работен ден! ✦ Грижа за всякакъв тип коса
-</div>
-
-<!-- HEADER -->
 <header>
-
-<div class="logo">
-HAIR CARE
-<span>BEAUTY • HAIR • CARE</span>
-</div>
+<div class="logo">HAIR <span>CARE</span></div>
 
 <nav>
-<a href="#home">Начало</a>
-<a href="#categories">Категории</a>
-<a href="#products">Продукти</a>
-<a href="#video">Видео</a>
-<a href="#tips">Съвети</a>
+<a href="index.html">Начало</a>
+<a href="products.html">Продукти</a>
+<a href="straight.html">Права коса</a>
+<a href="curly.html">Къдрава коса</a>
+<a href="tips.html">Съвети</a>
 </nav>
 
-<div class="icons">
-🔍 🛍️
-</div>
-
+<div class="cart">🛍️ <span id="cart-count">0</span></div>
 </header>
 
-<!-- ГОЛЯМ БАНЕР -->
-<section class="hero" id="home">
+<section class="hero">
+<div class="hero-text">
+<p class="small-title">HAIR CARE COLLECTION</p>
 
-<div class="hero-content">
-
-<h1>Красива коса всеки ден</h1>
+<h1>Красива коса.<br>
+Всеки ден.</h1>
 
 <p>
 Открий правилната грижа за твоята коса –
 права, къдрава, суха или мазна.
 </p>
 
-<a href="#products" class="button">
-Разгледай продуктите →
-</a>
-
+<a href="products.html" class="button">РАЗГЛЕДАЙ ПРОДУКТИТЕ</a>
 </div>
-
 </section>
 
-<!-- КАТЕГОРИИ -->
-<section class="section" id="categories">
-
-<h2 class="section-title">
-Грижа според типа коса
-</h2>
-
-<div class="categories">
+<section class="categories">
 
 <div class="category">
-<img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80">
-<h3>Права коса</h3>
-<p>За гладка, блестяща и здрава коса.</p>
+<div class="category-icon">✨</div>
+<h2>Права коса</h2>
+<p>Гладкост, блясък и защита.</p>
+<a href="straight.html">Научи повече →</a>
 </div>
 
 <div class="category">
-<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80">
-<h3>Къдрава коса</h3>
+<div class="category-icon">🌀</div>
+<h2>Къдрава коса</h2>
 <p>Хидратация и оформяне на къдриците.</p>
+<a href="curly.html">Научи повече →</a>
 </div>
 
 <div class="category">
-<img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=800&q=80">
-<h3>Суха и увредена коса</h3>
-<p>Възстановяване и интензивна грижа.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ПРОДУКТИ -->
-<section class="section" id="products">
-
-<h2 class="section-title">
-Препоръчани продукти
-</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80">
-<h3>Хидратиращ шампоан</h3>
-<div class="price">24.90 лв.</div>
-<a class="button" href="#">Купи</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80">
-<h3>Маска за коса</h3>
-<div class="price">29.90 лв.</div>
-<a class="button" href="#">Купи</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80">
-<h3>Серум за краища</h3>
-<div class="price">22.90 лв.</div>
-<a class="button" href="#">Купи</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=600&q=80">
-<h3>Масло за коса</h3>
-<div class="price">27.90 лв.</div>
-<a class="button" href="#">Купи</a>
-</div>
-
+<div class="category-icon">🌿</div>
+<h2>Ежедневна грижа</h2>
+<p>Лесни съвети за здрава коса.</p>
+<a href="tips.html">Научи повече →</a>
 </div>
 
 </section>
 
-<!-- ВИДЕО -->
-<section class="video-section" id="video">
+<section class="video-section">
 
-<h2 class="section-title">
-Видео за грижа за косата
-</h2>
+<h2 class="section-title">Видео за грижа за косата</h2>
 
 <div class="video-container">
 
 <iframe
-src="https://www.youtube.com/embed/ULs4GP0WRSI"
+src="https://www.youtube.com/embed/ULS4GP0WRSI"
 title="Видео за грижа за косата"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 
+</div>
+
 <p class="video-text">
-Полезни съвети за правилна грижа за права и къдрава коса.
+Полезни съвети за правилна грижа и поддържане
+на красива и здрава коса.
 </p>
-
-</div>
 
 </section>
 
-<!-- СЪВЕТИ -->
-<section class="section" id="tips">
+<section class="welcome">
 
-<h2 class="section-title">
-Нашите съвети
-</h2>
+<h2>Грижа за всеки тип коса</h2>
 
-<div class="tips">
-
-<div class="tip">
-<h3>💧 Хидратация</h3>
 <p>
-Използвай подходящ балсам и маска според нуждите на косата.
+Независимо дали косата ти е права, къдрава,
+суха или склонна към омазняване, правилната
+рутина може да я направи по-здрава и блестяща.
 </p>
-</div>
 
-<div class="tip">
-<h3>✨ За блясък</h3>
-<p>
-Използвай серум или масло върху дължините и краищата.
-</p>
-</div>
-
-<div class="tip">
-<h3>🌿 За къдрици</h3>
-<p>
-Избягвай прекомерното разресване и използвай продукти за къдрава коса.
-</p>
-</div>
-
-</div>
+<a href="products.html" class="button">ВИЖ ПРОДУКТИТЕ</a>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-
-<h2>HAIR CARE</h2>
-
-<p>Грижа за всяка коса</p>
-
+<div class="logo">HAIR <span>CARE</span></div>
+<p>Грижа за косата с любов 🤎</p>
 <p>© 2026 Hair Care</p>
-
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
