@@ -1,520 +1,478 @@
-
-
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Грижа за косата</title>
+<title>HAIR CARE – Грижа за косата</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body {
+font-family: Arial, sans-serif;
+background: #f5eee7;
+color: #3e2b20;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff8fb;
-            color: #333;
-            line-height: 1.6;
-        }
+/* ГОРНО СЪОБЩЕНИЕ */
+.top-bar {
+background: #4b3022;
+color: white;
+text-align: center;
+padding: 14px;
+font-size: 16px;
+}
 
-        /* НАВИГАЦИЯ */
-        nav {
-            background: #d98da8;
-            padding: 18px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-        }
+/* HEADER */
+header {
+background: white;
+padding: 18px 6%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid #ddd0c5;
+}
 
-        .logo {
-            color: white;
-            font-size: 25px;
-            font-weight: bold;
-        }
+.logo {
+font-family: Georgia, serif;
+font-size: 24px;
+font-weight: bold;
+color: #4b3022;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+.logo span {
+font-size: 12px;
+display: block;
+letter-spacing: 3px;
+font-weight: normal;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav {
+display: flex;
+gap: 30px;
+}
 
-        nav a:hover {
-            color: #ffe5ef;
-        }
+nav a {
+text-decoration: none;
+color: #3e2b20;
+font-size: 16px;
+}
 
-        /* НАЧАЛНА СЕКЦИЯ */
-        .hero {
-            min-height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #f8d7e3, #fff5f8);
-        }
+nav a:hover {
+color: #9a6b4d;
+}
 
-        .hero h1 {
-            font-size: 52px;
-            color: #a94f70;
-            margin-bottom: 20px;
-        }
+.icons {
+display: flex;
+gap: 20px;
+font-size: 25px;
+}
 
-        .hero p {
-            font-size: 21px;
-            max-width: 700px;
-            margin: auto;
-            color: #555;
-        }
+/* HERO */
+.hero {
+margin: 30px auto;
+width: 90%;
+min-height: 430px;
+border-radius: 5px;
 
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 30px;
-            background: #c96f91;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+background:
+linear-gradient(rgba(50,30,20,.25), rgba(50,30,20,.25)),
+url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=80");
 
-        .button:hover {
-            background: #a94f70;
-        }
+background-size: cover;
+background-position: center;
 
-        /* ОБЩИ СЕКЦИИ */
-        section {
-            padding: 70px 8%;
-        }
+display: flex;
+align-items: center;
+padding: 50px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #a94f70;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
+.hero-content {
+color: white;
+max-width: 550px;
+}
 
-        /* ТИПОВЕ КОСА */
-        .hair-types {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
+.hero-content h1 {
+font-family: Georgia, serif;
+font-size: 48px;
+margin-bottom: 20px;
+}
 
-        .hair-card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
+.hero-content p {
+font-size: 20px;
+margin-bottom: 25px;
+}
 
-        .hair-card:hover {
-            transform: translateY(-8px);
-        }
+.button {
+display: inline-block;
+background: #6b4632;
+color: white;
+padding: 14px 28px;
+text-decoration: none;
+border-radius: 3px;
+}
 
-        .hair-card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
+.button:hover {
+background: #4b3022;
+}
 
-        .hair-card h3 {
-            color: #b45b7d;
-            margin-bottom: 12px;
-        }
+/* КАТЕГОРИИ */
+.section {
+width: 90%;
+margin: 60px auto;
+}
 
-        /* СЪВЕТИ */
-        .tips {
-            background: #fcebf2;
-        }
+.section-title {
+text-align: center;
+font-family: Georgia, serif;
+font-size: 32px;
+margin-bottom: 30px;
+color: #4b3022;
+}
 
-        .tips-container {
-            max-width: 900px;
-            margin: auto;
-        }
+.categories {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
 
-        .tip {
-            background: white;
-            margin-bottom: 18px;
-            padding: 22px;
-            border-left: 6px solid #d98da8;
-            border-radius: 10px;
-        }
+.category {
+background: white;
+padding: 20px;
+text-align: center;
+border-radius: 5px;
+}
 
-        .tip h3 {
-            color: #a94f70;
-            margin-bottom: 8px;
-        }
+.category img {
+width: 100%;
+height: 230px;
+object-fit: cover;
+}
 
-        /* РУТИНА */
-        .routine {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.category h3 {
+margin: 15px 0;
+font-family: Georgia, serif;
+}
 
-        .routine-card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-        }
+/* ПРОДУКТИ */
+.products {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
 
-        .routine-card h3 {
-            color: #a94f70;
-            margin-bottom: 15px;
-        }
+.product {
+background: white;
+padding: 15px;
+text-align: center;
+border-radius: 5px;
+}
 
-        /* ВИДЕО */
-        .video-section {
-            background: #f8dce7;
-            text-align: center;
-        }
+.product img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
 
-        .video-container {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            padding: 15px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-        }
+.product h3 {
+margin: 12px 0 8px;
+}
 
-        video {
-            width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
+.price {
+color: #8a5a3c;
+font-weight: bold;
+font-size: 18px;
+margin-bottom: 12px;
+}
 
-        .video-text {
-            margin-top: 20px;
-            color: #555;
-        }
+/* ВИДЕО */
+.video-section {
+background: #e8d8ca;
+padding: 60px 5%;
+margin-top: 60px;
+}
 
-        /* ФИНАЛНА СЕКЦИЯ */
-        .about {
-            text-align: center;
-            max-width: 850px;
-            margin: auto;
-        }
+.video-container {
+max-width: 850px;
+margin: auto;
+}
 
-        .about p {
-            font-size: 18px;
-        }
+.video-container iframe {
+width: 100%;
+height: 480px;
+border: none;
+border-radius: 8px;
+}
 
-        /* FOOTER */
-        footer {
-            background: #a94f70;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.video-text {
+text-align: center;
+margin-top: 20px;
+font-size: 18px;
+}
 
-        /* МОБИЛНА ВЕРСИЯ */
-        @media (max-width: 900px) {
+/* СЪВЕТИ */
+.tips {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
 
-            .hair-types {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.tip {
+background: white;
+padding: 30px;
+text-align: center;
+border-radius: 5px;
+}
 
-            .routine {
-                grid-template-columns: 1fr;
-            }
+.tip h3 {
+color: #6b4632;
+margin-bottom: 12px;
+}
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
+/* FOOTER */
+footer {
+background: #4b3022;
+color: white;
+text-align: center;
+padding: 35px;
+margin-top: 60px;
+}
 
-        @media (max-width: 600px) {
+footer p {
+margin: 8px;
+}
 
-            .hair-types {
-                grid-template-columns: 1fr;
-            }
+/* МОБИЛНА ВЕРСИЯ */
+@media (max-width: 800px) {
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
+header {
+flex-wrap: wrap;
+gap: 15px;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+nav {
+width: 100%;
+justify-content: center;
+gap: 15px;
+order: 3;
+}
 
-            .hero p {
-                font-size: 18px;
-            }
-        }
-    </style>
+.hero {
+min-height: 400px;
+padding: 25px;
+}
+
+.hero-content h1 {
+font-size: 35px;
+}
+
+.categories,
+.products,
+.tips {
+grid-template-columns: 1fr;
+}
+
+.video-container iframe {
+height: 300px;
+}
+}
+</style>
 </head>
 
 <body>
 
-    <!-- НАВИГАЦИЯ -->
-    <nav>
-        <div class="logo">Hair Care</div>
+<!-- ГОРНО СЪОБЩЕНИЕ -->
+<div class="top-bar">
+Доставка за един работен ден! ✦ Грижа за всякакъв тип коса
+</div>
 
-        <ul>
-            <li><a href="#home">Начало</a></li>
-            <li><a href="#types">Типове коса</a></li>
-            <li><a href="#tips">Съвети</a></li>
-            <li><a href="#routine">Рутина</a></li>
-            <li><a href="#video">Видео</a></li>
-        </ul>
-    </nav>
+<!-- HEADER -->
+<header>
+
+<div class="logo">
+HAIR CARE
+<span>BEAUTY • HAIR • CARE</span>
+</div>
+
+<nav>
+<a href="#home">Начало</a>
+<a href="#categories">Категории</a>
+<a href="#products">Продукти</a>
+<a href="#video">Видео</a>
+<a href="#tips">Съвети</a>
+</nav>
 
+<div class="icons">
+🔍 🛍️
+</div>
 
-    <!-- НАЧАЛО -->
-    <section class="hero" id="home">
+</header>
 
-        <div>
-            <h1>Грижа за косата</h1>
+<!-- ГОЛЯМ БАНЕР -->
+<section class="hero" id="home">
 
-            <p>
-                Открий правилната грижа за твоята коса –
-                права, къдрава, чуплива или суха.
-                Здравата коса започва с правилната ежедневна рутина.
-            </p>
+<div class="hero-content">
 
-            <a href="#types" class="button">
-                Научи повече
-            </a>
-        </div>
-
-    </section>
-
-
-    <!-- ТИПОВЕ КОСА -->
-    <section id="types">
-
-        <h2 class="section-title">Грижа според типа коса</h2>
-
-        <div class="hair-types">
-
-            <div class="hair-card">
-                <div class="icon">✨</div>
-
-                <h3>Права коса</h3>
-
-                <p>
-                    Използвай леки продукти, които не утежняват косата.
-                    Избягвай прекомерното омазняване на корените.
-                </p>
-            </div>
-
-
-            <div class="hair-card">
-                <div class="icon">🌀</div>
-
-                <h3>Къдрава коса</h3>
-
-                <p>
-                    Къдриците имат нужда от хидратация.
-                    Използвай балсам и продукти за оформяне на къдриците.
-                </p>
-            </div>
-
-
-            <div class="hair-card">
-                <div class="icon">〰️</div>
-
-                <h3>Чуплива коса</h3>
-
-                <p>
-                    Поддържай естествената форма на косата
-                    с подходяща хидратация и нежно разресване.
-                </p>
-            </div>
-
-
-            <div class="hair-card">
-                <div class="icon">🌸</div>
-
-                <h3>Суха коса</h3>
-
-                <p>
-                    Използвай подхранващи маски и балсам.
-                    Ограничаването на високата температура също помага.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- СЪВЕТИ -->
-    <section class="tips" id="tips">
-
-        <h2 class="section-title">Основни съвети</h2>
-
-        <div class="tips-container">
-
-            <div class="tip">
-                <h3>1. Не мий косата с прекалено гореща вода</h3>
-
-                <p>
-                    Хладката вода е по-щадяща за косата и скалпа.
-                </p>
-            </div>
-
-
-            <div class="tip">
-                <h3>2. Използвай балсам</h3>
-
-                <p>
-                    Балсамът помага за по-лесното разресване
-                    и поддържа косата по-мека.
-                </p>
-            </div>
-
-
-            <div class="tip">
-                <h3>3. Не търкай косата силно с кърпа</h3>
-
-                <p>
-                    Подсушавай внимателно, без агресивно търкане.
-                </p>
-            </div>
-
-
-            <div class="tip">
-                <h3>4. Ограничѝ прекомерната топлина</h3>
-
-                <p>
-                    Сешоарът, пресата и машата могат да изсушат косата.
-                    При използване на топлинни уреди използвай подходяща защита.
-                </p>
-            </div>
-
-
-            <div class="tip">
-                <h3>5. Подстригвай редовно краищата</h3>
-
-                <p>
-                    Редовното подрязване може да помогне за поддържането
-                    на добър вид на краищата.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- РУТИНА -->
-    <section id="routine">
-
-        <h2 class="section-title">Ежедневна рутина</h2>
-
-        <div class="routine">
-
-            <div class="routine-card">
-
-                <h3>🌸 Стъпка 1 – Измиване</h3>
-
-                <p>
-                    Избери шампоан според нуждите на косата и скалпа.
-                    Масажирай нежно скалпа.
-                </p>
-
-            </div>
-
-
-            <div class="routine-card">
-
-                <h3>💧 Стъпка 2 – Хидратация</h3>
-
-                <p>
-                    След шампоана използвай балсам.
-                    При нужда добави маска веднъж или няколко пъти седмично.
-                </p>
-
-            </div>
-
-
-            <div class="routine-card">
-
-                <h3>✨ Стъпка 3 – Оформяне</h3>
-
-                <p>
-                    Използвай подходящ продукт за твоя тип коса
-                    и избягвай прекомерното използване на топлина.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
- <iframe
-    width="100%"
-    height="450"
-    src="https://www.youtube.com/embed/ULS4GP0WRSI"
-    title="Видео за грижа за косата"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
+<h1>Красива коса всеки ден</h1>
+
+<p>
+Открий правилната грижа за твоята коса –
+права, къдрава, суха или мазна.
+</p>
+
+<a href="#products" class="button">
+Разгледай продуктите →
+</a>
+
+</div>
+
+</section>
+
+<!-- КАТЕГОРИИ -->
+<section class="section" id="categories">
+
+<h2 class="section-title">
+Грижа според типа коса
+</h2>
+
+<div class="categories">
+
+<div class="category">
+<img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80">
+<h3>Права коса</h3>
+<p>За гладка, блестяща и здрава коса.</p>
+</div>
+
+<div class="category">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80">
+<h3>Къдрава коса</h3>
+<p>Хидратация и оформяне на къдриците.</p>
+</div>
+
+<div class="category">
+<img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=800&q=80">
+<h3>Суха и увредена коса</h3>
+<p>Възстановяване и интензивна грижа.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ПРОДУКТИ -->
+<section class="section" id="products">
+
+<h2 class="section-title">
+Препоръчани продукти
+</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80">
+<h3>Хидратиращ шампоан</h3>
+<div class="price">24.90 лв.</div>
+<a class="button" href="#">Купи</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80">
+<h3>Маска за коса</h3>
+<div class="price">29.90 лв.</div>
+<a class="button" href="#">Купи</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80">
+<h3>Серум за краища</h3>
+<div class="price">22.90 лв.</div>
+<a class="button" href="#">Купи</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=600&q=80">
+<h3>Масло за коса</h3>
+<div class="price">27.90 лв.</div>
+<a class="button" href="#">Купи</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ВИДЕО -->
+<section class="video-section" id="video">
+
+<h2 class="section-title">
+Видео за грижа за косата
+</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/ULs4GP0WRSI"
+title="Видео за грижа за косата"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
 </iframe>
 
-            <p class="video-text">
-                Видео с полезни съвети за правилна грижа
-                за различни типове коса.
-            </p>
+<p class="video-text">
+Полезни съвети за правилна грижа за права и къдрава коса.
+</p>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
+<!-- СЪВЕТИ -->
+<section class="section" id="tips">
 
-    <!-- ЗА САЙТА -->
-    <section>
+<h2 class="section-title">
+Нашите съвети
+</h2>
 
-        <div class="about">
+<div class="tips">
 
-            <h2 class="section-title">За сайта</h2>
+<div class="tip">
+<h3>💧 Хидратация</h3>
+<p>
+Използвай подходящ балсам и маска според нуждите на косата.
+</p>
+</div>
 
-            <p>
-                Този сайт е създаден с цел да предоставя основна
-                информация и практични съвети за грижата за различни
-                типове коса. Всеки тип коса има различни нужди,
-                затова е важно да се избира подходяща ежедневна рутина.
-            </p>
+<div class="tip">
+<h3>✨ За блясък</h3>
+<p>
+Използвай серум или масло върху дължините и краищата.
+</p>
+</div>
 
-        </div>
+<div class="tip">
+<h3>🌿 За къдрици</h3>
+<p>
+Избягвай прекомерното разресване и използвай продукти за къдрава коса.
+</p>
+</div>
 
-    </section>
+</div>
 
+</section>
 
-    <!-- FOOTER -->
-    <footer>
+<!-- FOOTER -->
+<footer>
 
-        <p>© 2026 Hair Care | Грижа за всяка коса</p>
+<h2>HAIR CARE</h2>
 
-    </footer>
+<p>Грижа за всяка коса</p>
+
+<p>© 2026 Hair Care</p>
+
+</footer>
 
 </body>
 </html>
